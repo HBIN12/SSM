@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--扫描spring注解包-->
+    <context:component-scan base-package="com.gduf.chb"></context:component-scan>
+    <!--读取本地配置文件-->
+    <context:property-placeholder location="classpath:JDBC.properties"></context:property-placeholder>
+    <!--声明数据源-->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driver}"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/mms?serverTimezone=UTC"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="1135911642"></property>
+    </bean>
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="mapperLocations" value="classpath:mappers/*Mapper.xml"></property>
+    </bean>
+
+    <!--扫描mapper类 自动注入-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.gduf.chb.mapper"></property>
+    </bean>
+
+</beans>

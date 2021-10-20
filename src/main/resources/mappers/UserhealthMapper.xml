@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gduf.chb.mapper.UserhealthMapper" >
+  <resultMap id="BaseResultMap" type="com.gduf.chb.bean.Userhealth" >
+    <id column="IDcard" property="idcard" jdbcType="VARCHAR" />
+    <result column="nucleic acid" property="nucleicAcid" jdbcType="VARCHAR" />
+    <result column="vaccination" property="vaccination" jdbcType="VARCHAR" />
+    <result column="temperature" property="temperature" jdbcType="VARCHAR" />
+    <result column="current" property="current" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    IDcard, "nucleic acid", vaccination, temperature, current
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gduf.chb.bean.UserhealthExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from userhealth
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from userhealth
+    where IDcard = #{idcard,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from userhealth
+    where IDcard = #{idcard,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.gduf.chb.bean.UserhealthExample" >
+    delete from userhealth
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.gduf.chb.bean.Userhealth" >
+    insert into userhealth (IDcard, "nucleic acid", vaccination, 
+      temperature, current)
+    values (#{idcard,jdbcType=VARCHAR}, #{nucleicAcid,jdbcType=VARCHAR}, #{vaccination,jdbcType=VARCHAR}, 
+      #{temperature,jdbcType=VARCHAR}, #{current,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gduf.chb.bean.Userhealth" >
+    insert into userhealth
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="idcard != null" >
+        IDcard,
+      </if>
+      <if test="nucleicAcid != null" >
+        "nucleic acid",
+      </if>
+      <if test="vaccination != null" >
+        vaccination,
+      </if>
+      <if test="temperature != null" >
+        temperature,
+      </if>
+      <if test="current != null" >
+        current,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="idcard != null" >
+        #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="nucleicAcid != null" >
+        #{nucleicAcid,jdbcType=VARCHAR},
+      </if>
+      <if test="vaccination != null" >
+        #{vaccination,jdbcType=VARCHAR},
+      </if>
+      <if test="temperature != null" >
+        #{temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="current != null" >
+        #{current,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.gduf.chb.bean.UserhealthExample" resultType="java.lang.Integer" >
+    select count(*) from userhealth
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update userhealth
+    <set >
+      <if test="record.idcard != null" >
+        IDcard = #{record.idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nucleicAcid != null" >
+        "nucleic acid" = #{record.nucleicAcid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.vaccination != null" >
+        vaccination = #{record.vaccination,jdbcType=VARCHAR},
+      </if>
+      <if test="record.temperature != null" >
+        temperature = #{record.temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="record.current != null" >
+        current = #{record.current,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update userhealth
+    set IDcard = #{record.idcard,jdbcType=VARCHAR},
+      "nucleic acid" = #{record.nucleicAcid,jdbcType=VARCHAR},
+      vaccination = #{record.vaccination,jdbcType=VARCHAR},
+      temperature = #{record.temperature,jdbcType=VARCHAR},
+      current = #{record.current,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gduf.chb.bean.Userhealth" >
+    update userhealth
+    <set >
+      <if test="nucleicAcid != null" >
+        "nucleic acid" = #{nucleicAcid,jdbcType=VARCHAR},
+      </if>
+      <if test="vaccination != null" >
+        vaccination = #{vaccination,jdbcType=VARCHAR},
+      </if>
+      <if test="temperature != null" >
+        temperature = #{temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="current != null" >
+        current = #{current,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where IDcard = #{idcard,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gduf.chb.bean.Userhealth" >
+    update userhealth
+    set "nucleic acid" = #{nucleicAcid,jdbcType=VARCHAR},
+      vaccination = #{vaccination,jdbcType=VARCHAR},
+      temperature = #{temperature,jdbcType=VARCHAR},
+      current = #{current,jdbcType=VARCHAR}
+    where IDcard = #{idcard,jdbcType=VARCHAR}
+  </update>
+</mapper>
