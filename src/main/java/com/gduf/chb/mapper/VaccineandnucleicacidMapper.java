@@ -10,7 +10,7 @@ public interface VaccineandnucleicacidMapper {
 
     int deleteByExample(VaccineandnucleicacidExample example);
 
-    int deleteByPrimaryKey(Integer hospitalNumber);
+    int deleteByPrimaryKey(Integer hospitalnumber);
 
     int insert(Vaccineandnucleicacid record);
 
@@ -18,7 +18,7 @@ public interface VaccineandnucleicacidMapper {
 
     List<Vaccineandnucleicacid> selectByExample(VaccineandnucleicacidExample example);
 
-    Vaccineandnucleicacid selectByPrimaryKey(Integer hospitalNumber);
+    Vaccineandnucleicacid selectByPrimaryKey(Integer hospitalnumber);
 
     int updateByExampleSelective(@Param("record") Vaccineandnucleicacid record, @Param("example") VaccineandnucleicacidExample example);
 

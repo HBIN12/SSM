@@ -174,73 +174,73 @@ public class UserhealthExample {
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidIsNull() {
-            addCriterion("\"nucleic acid\" is null");
+        public Criteria andNucleicacidIsNull() {
+            addCriterion("NucleicAcid is null");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidIsNotNull() {
-            addCriterion("\"nucleic acid\" is not null");
+        public Criteria andNucleicacidIsNotNull() {
+            addCriterion("NucleicAcid is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidEqualTo(String value) {
-            addCriterion("\"nucleic acid\" =", value, "nucleicAcid");
+        public Criteria andNucleicacidEqualTo(String value) {
+            addCriterion("NucleicAcid =", value, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidNotEqualTo(String value) {
-            addCriterion("\"nucleic acid\" <>", value, "nucleicAcid");
+        public Criteria andNucleicacidNotEqualTo(String value) {
+            addCriterion("NucleicAcid <>", value, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidGreaterThan(String value) {
-            addCriterion("\"nucleic acid\" >", value, "nucleicAcid");
+        public Criteria andNucleicacidGreaterThan(String value) {
+            addCriterion("NucleicAcid >", value, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidGreaterThanOrEqualTo(String value) {
-            addCriterion("\"nucleic acid\" >=", value, "nucleicAcid");
+        public Criteria andNucleicacidGreaterThanOrEqualTo(String value) {
+            addCriterion("NucleicAcid >=", value, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidLessThan(String value) {
-            addCriterion("\"nucleic acid\" <", value, "nucleicAcid");
+        public Criteria andNucleicacidLessThan(String value) {
+            addCriterion("NucleicAcid <", value, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidLessThanOrEqualTo(String value) {
-            addCriterion("\"nucleic acid\" <=", value, "nucleicAcid");
+        public Criteria andNucleicacidLessThanOrEqualTo(String value) {
+            addCriterion("NucleicAcid <=", value, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidLike(String value) {
-            addCriterion("\"nucleic acid\" like", value, "nucleicAcid");
+        public Criteria andNucleicacidLike(String value) {
+            addCriterion("NucleicAcid like", value, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidNotLike(String value) {
-            addCriterion("\"nucleic acid\" not like", value, "nucleicAcid");
+        public Criteria andNucleicacidNotLike(String value) {
+            addCriterion("NucleicAcid not like", value, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidIn(List<String> values) {
-            addCriterion("\"nucleic acid\" in", values, "nucleicAcid");
+        public Criteria andNucleicacidIn(List<String> values) {
+            addCriterion("NucleicAcid in", values, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidNotIn(List<String> values) {
-            addCriterion("\"nucleic acid\" not in", values, "nucleicAcid");
+        public Criteria andNucleicacidNotIn(List<String> values) {
+            addCriterion("NucleicAcid not in", values, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidBetween(String value1, String value2) {
-            addCriterion("\"nucleic acid\" between", value1, value2, "nucleicAcid");
+        public Criteria andNucleicacidBetween(String value1, String value2) {
+            addCriterion("NucleicAcid between", value1, value2, "nucleicacid");
             return (Criteria) this;
         }
 
-        public Criteria andNucleicAcidNotBetween(String value1, String value2) {
-            addCriterion("\"nucleic acid\" not between", value1, value2, "nucleicAcid");
+        public Criteria andNucleicacidNotBetween(String value1, String value2) {
+            addCriterion("NucleicAcid not between", value1, value2, "nucleicacid");
             return (Criteria) this;
         }
 

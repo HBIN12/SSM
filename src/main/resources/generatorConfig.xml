@@ -65,7 +65,7 @@
         <table tableName="NucleicAcidresult"></table>
         <table tableName="Vaccinationresult"></table>
         <table tableName="UserHealth"></table>
-        <table tableName="Hospital"></table>
+        <table tableName="Hospital" ></table>
         <table tableName="staff"></table>
         <table tableName="VaccineAndNucleicAcid"></table>
         <table tableName="RiskRegion"></table>

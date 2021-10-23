@@ -4,8 +4,8 @@
   <resultMap id="BaseResultMap" type="com.gduf.chb.bean.Vaccinationreservation" >
     <id column="IDcard" property="idcard" jdbcType="VARCHAR" />
     <result column="time" property="time" jdbcType="TIMESTAMP" />
-    <result column="hospital name" property="hospitalName" jdbcType="VARCHAR" />
-    <result column="vaccine type" property="vaccineType" jdbcType="VARCHAR" />
+    <result column="HospitalName" property="hospitalname" jdbcType="VARCHAR" />
+    <result column="VaccineType" property="vaccinetype" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -66,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    IDcard, time, "hospital name", "vaccine type"
+    IDcard, time, HospitalName, VaccineType
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gduf.chb.bean.VaccinationreservationExample" >
     select
@@ -99,10 +99,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.gduf.chb.bean.Vaccinationreservation" >
-    insert into vaccinationreservation (IDcard, time, "hospital name", 
-      "vaccine type")
-    values (#{idcard,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{hospitalName,jdbcType=VARCHAR}, 
-      #{vaccineType,jdbcType=VARCHAR})
+    insert into vaccinationreservation (IDcard, time, HospitalName, 
+      VaccineType)
+    values (#{idcard,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{hospitalname,jdbcType=VARCHAR}, 
+      #{vaccinetype,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.gduf.chb.bean.Vaccinationreservation" >
     insert into vaccinationreservation
@@ -113,11 +113,11 @@
       <if test="time != null" >
         time,
       </if>
-      <if test="hospitalName != null" >
-        "hospital name",
+      <if test="hospitalname != null" >
+        HospitalName,
       </if>
-      <if test="vaccineType != null" >
-        "vaccine type",
+      <if test="vaccinetype != null" >
+        VaccineType,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -127,11 +127,11 @@
       <if test="time != null" >
         #{time,jdbcType=TIMESTAMP},
       </if>
-      <if test="hospitalName != null" >
-        #{hospitalName,jdbcType=VARCHAR},
+      <if test="hospitalname != null" >
+        #{hospitalname,jdbcType=VARCHAR},
       </if>
-      <if test="vaccineType != null" >
-        #{vaccineType,jdbcType=VARCHAR},
+      <if test="vaccinetype != null" >
+        #{vaccinetype,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -150,11 +150,11 @@
       <if test="record.time != null" >
         time = #{record.time,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.hospitalName != null" >
-        "hospital name" = #{record.hospitalName,jdbcType=VARCHAR},
+      <if test="record.hospitalname != null" >
+        HospitalName = #{record.hospitalname,jdbcType=VARCHAR},
       </if>
-      <if test="record.vaccineType != null" >
-        "vaccine type" = #{record.vaccineType,jdbcType=VARCHAR},
+      <if test="record.vaccinetype != null" >
+        VaccineType = #{record.vaccinetype,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -165,8 +165,8 @@
     update vaccinationreservation
     set IDcard = #{record.idcard,jdbcType=VARCHAR},
       time = #{record.time,jdbcType=TIMESTAMP},
-      "hospital name" = #{record.hospitalName,jdbcType=VARCHAR},
-      "vaccine type" = #{record.vaccineType,jdbcType=VARCHAR}
+      HospitalName = #{record.hospitalname,jdbcType=VARCHAR},
+      VaccineType = #{record.vaccinetype,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -177,11 +177,11 @@
       <if test="time != null" >
         time = #{time,jdbcType=TIMESTAMP},
       </if>
-      <if test="hospitalName != null" >
-        "hospital name" = #{hospitalName,jdbcType=VARCHAR},
+      <if test="hospitalname != null" >
+        HospitalName = #{hospitalname,jdbcType=VARCHAR},
       </if>
-      <if test="vaccineType != null" >
-        "vaccine type" = #{vaccineType,jdbcType=VARCHAR},
+      <if test="vaccinetype != null" >
+        VaccineType = #{vaccinetype,jdbcType=VARCHAR},
       </if>
     </set>
     where IDcard = #{idcard,jdbcType=VARCHAR}
@@ -189,8 +189,8 @@
   <update id="updateByPrimaryKey" parameterType="com.gduf.chb.bean.Vaccinationreservation" >
     update vaccinationreservation
     set time = #{time,jdbcType=TIMESTAMP},
-      "hospital name" = #{hospitalName,jdbcType=VARCHAR},
-      "vaccine type" = #{vaccineType,jdbcType=VARCHAR}
+      HospitalName = #{hospitalname,jdbcType=VARCHAR},
+      VaccineType = #{vaccinetype,jdbcType=VARCHAR}
     where IDcard = #{idcard,jdbcType=VARCHAR}
   </update>
 </mapper>

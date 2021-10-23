@@ -6,7 +6,7 @@ import com.gduf.chb.bean.Staff;
 import com.gduf.chb.bean.User;
 
 public interface LoginService {
-    boolean logincheck(String id,String password);
+    String logincheck(String id,String password);
     int userregister(String id,String password);
     int staffregister(String id,String password,String code);
     boolean checkid(String id);

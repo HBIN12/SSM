@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.gduf.chb.mapper.VaccineandnucleicacidMapper" >
   <resultMap id="BaseResultMap" type="com.gduf.chb.bean.Vaccineandnucleicacid" >
-    <id column="hospital number" property="hospitalNumber" jdbcType="INTEGER" />
-    <result column="reagent type" property="reagentType" jdbcType="VARCHAR" />
-    <result column="total amount" property="totalAmount" jdbcType="INTEGER" />
-    <result column="remaining amount" property="remainingAmount" jdbcType="INTEGER" />
+    <id column="HospitalNumber" property="hospitalnumber" jdbcType="INTEGER" />
+    <result column="ReagentType" property="reagenttype" jdbcType="VARCHAR" />
+    <result column="TotalAmount" property="totalamount" jdbcType="INTEGER" />
+    <result column="RemainingAmount" property="remainingamount" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -66,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    "hospital number", "reagent type", "total amount", "remaining amount"
+    HospitalNumber, ReagentType, TotalAmount, RemainingAmount
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gduf.chb.bean.VaccineandnucleicacidExample" >
     select
@@ -86,11 +86,11 @@
     select 
     <include refid="Base_Column_List" />
     from vaccineandnucleicacid
-    where "hospital number" = #{hospitalNumber,jdbcType=INTEGER}
+    where HospitalNumber = #{hospitalnumber,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from vaccineandnucleicacid
-    where "hospital number" = #{hospitalNumber,jdbcType=INTEGER}
+    where HospitalNumber = #{hospitalnumber,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.gduf.chb.bean.VaccineandnucleicacidExample" >
     delete from vaccineandnucleicacid
@@ -99,39 +99,39 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.gduf.chb.bean.Vaccineandnucleicacid" >
-    insert into vaccineandnucleicacid ("hospital number", "reagent type", "total amount", 
-      "remaining amount")
-    values (#{hospitalNumber,jdbcType=INTEGER}, #{reagentType,jdbcType=VARCHAR}, #{totalAmount,jdbcType=INTEGER}, 
-      #{remainingAmount,jdbcType=INTEGER})
+    insert into vaccineandnucleicacid (HospitalNumber, ReagentType, TotalAmount, 
+      RemainingAmount)
+    values (#{hospitalnumber,jdbcType=INTEGER}, #{reagenttype,jdbcType=VARCHAR}, #{totalamount,jdbcType=INTEGER}, 
+      #{remainingamount,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.gduf.chb.bean.Vaccineandnucleicacid" >
     insert into vaccineandnucleicacid
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="hospitalNumber != null" >
-        "hospital number",
+      <if test="hospitalnumber != null" >
+        HospitalNumber,
       </if>
-      <if test="reagentType != null" >
-        "reagent type",
+      <if test="reagenttype != null" >
+        ReagentType,
       </if>
-      <if test="totalAmount != null" >
-        "total amount",
+      <if test="totalamount != null" >
+        TotalAmount,
       </if>
-      <if test="remainingAmount != null" >
-        "remaining amount",
+      <if test="remainingamount != null" >
+        RemainingAmount,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="hospitalNumber != null" >
-        #{hospitalNumber,jdbcType=INTEGER},
+      <if test="hospitalnumber != null" >
+        #{hospitalnumber,jdbcType=INTEGER},
       </if>
-      <if test="reagentType != null" >
-        #{reagentType,jdbcType=VARCHAR},
+      <if test="reagenttype != null" >
+        #{reagenttype,jdbcType=VARCHAR},
       </if>
-      <if test="totalAmount != null" >
-        #{totalAmount,jdbcType=INTEGER},
+      <if test="totalamount != null" >
+        #{totalamount,jdbcType=INTEGER},
       </if>
-      <if test="remainingAmount != null" >
-        #{remainingAmount,jdbcType=INTEGER},
+      <if test="remainingamount != null" >
+        #{remainingamount,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -144,17 +144,17 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update vaccineandnucleicacid
     <set >
-      <if test="record.hospitalNumber != null" >
-        "hospital number" = #{record.hospitalNumber,jdbcType=INTEGER},
+      <if test="record.hospitalnumber != null" >
+        HospitalNumber = #{record.hospitalnumber,jdbcType=INTEGER},
       </if>
-      <if test="record.reagentType != null" >
-        "reagent type" = #{record.reagentType,jdbcType=VARCHAR},
+      <if test="record.reagenttype != null" >
+        ReagentType = #{record.reagenttype,jdbcType=VARCHAR},
       </if>
-      <if test="record.totalAmount != null" >
-        "total amount" = #{record.totalAmount,jdbcType=INTEGER},
+      <if test="record.totalamount != null" >
+        TotalAmount = #{record.totalamount,jdbcType=INTEGER},
       </if>
-      <if test="record.remainingAmount != null" >
-        "remaining amount" = #{record.remainingAmount,jdbcType=INTEGER},
+      <if test="record.remainingamount != null" >
+        RemainingAmount = #{record.remainingamount,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -163,10 +163,10 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update vaccineandnucleicacid
-    set "hospital number" = #{record.hospitalNumber,jdbcType=INTEGER},
-      "reagent type" = #{record.reagentType,jdbcType=VARCHAR},
-      "total amount" = #{record.totalAmount,jdbcType=INTEGER},
-      "remaining amount" = #{record.remainingAmount,jdbcType=INTEGER}
+    set HospitalNumber = #{record.hospitalnumber,jdbcType=INTEGER},
+      ReagentType = #{record.reagenttype,jdbcType=VARCHAR},
+      TotalAmount = #{record.totalamount,jdbcType=INTEGER},
+      RemainingAmount = #{record.remainingamount,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -174,23 +174,23 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.gduf.chb.bean.Vaccineandnucleicacid" >
     update vaccineandnucleicacid
     <set >
-      <if test="reagentType != null" >
-        "reagent type" = #{reagentType,jdbcType=VARCHAR},
+      <if test="reagenttype != null" >
+        ReagentType = #{reagenttype,jdbcType=VARCHAR},
       </if>
-      <if test="totalAmount != null" >
-        "total amount" = #{totalAmount,jdbcType=INTEGER},
+      <if test="totalamount != null" >
+        TotalAmount = #{totalamount,jdbcType=INTEGER},
       </if>
-      <if test="remainingAmount != null" >
-        "remaining amount" = #{remainingAmount,jdbcType=INTEGER},
+      <if test="remainingamount != null" >
+        RemainingAmount = #{remainingamount,jdbcType=INTEGER},
       </if>
     </set>
-    where "hospital number" = #{hospitalNumber,jdbcType=INTEGER}
+    where HospitalNumber = #{hospitalnumber,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.gduf.chb.bean.Vaccineandnucleicacid" >
     update vaccineandnucleicacid
-    set "reagent type" = #{reagentType,jdbcType=VARCHAR},
-      "total amount" = #{totalAmount,jdbcType=INTEGER},
-      "remaining amount" = #{remainingAmount,jdbcType=INTEGER}
-    where "hospital number" = #{hospitalNumber,jdbcType=INTEGER}
+    set ReagentType = #{reagenttype,jdbcType=VARCHAR},
+      TotalAmount = #{totalamount,jdbcType=INTEGER},
+      RemainingAmount = #{remainingamount,jdbcType=INTEGER}
+    where HospitalNumber = #{hospitalnumber,jdbcType=INTEGER}
   </update>
 </mapper>

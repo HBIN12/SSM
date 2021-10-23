@@ -174,73 +174,73 @@ public class StaffExample {
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberIsNull() {
-            addCriterion("\"hospital number\" is null");
+        public Criteria andHospitalnumberIsNull() {
+            addCriterion("HospitalNumber is null");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberIsNotNull() {
-            addCriterion("\"hospital number\" is not null");
+        public Criteria andHospitalnumberIsNotNull() {
+            addCriterion("HospitalNumber is not null");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberEqualTo(String value) {
-            addCriterion("\"hospital number\" =", value, "hospitalNumber");
+        public Criteria andHospitalnumberEqualTo(String value) {
+            addCriterion("HospitalNumber =", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberNotEqualTo(String value) {
-            addCriterion("\"hospital number\" <>", value, "hospitalNumber");
+        public Criteria andHospitalnumberNotEqualTo(String value) {
+            addCriterion("HospitalNumber <>", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberGreaterThan(String value) {
-            addCriterion("\"hospital number\" >", value, "hospitalNumber");
+        public Criteria andHospitalnumberGreaterThan(String value) {
+            addCriterion("HospitalNumber >", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberGreaterThanOrEqualTo(String value) {
-            addCriterion("\"hospital number\" >=", value, "hospitalNumber");
+        public Criteria andHospitalnumberGreaterThanOrEqualTo(String value) {
+            addCriterion("HospitalNumber >=", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberLessThan(String value) {
-            addCriterion("\"hospital number\" <", value, "hospitalNumber");
+        public Criteria andHospitalnumberLessThan(String value) {
+            addCriterion("HospitalNumber <", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberLessThanOrEqualTo(String value) {
-            addCriterion("\"hospital number\" <=", value, "hospitalNumber");
+        public Criteria andHospitalnumberLessThanOrEqualTo(String value) {
+            addCriterion("HospitalNumber <=", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberLike(String value) {
-            addCriterion("\"hospital number\" like", value, "hospitalNumber");
+        public Criteria andHospitalnumberLike(String value) {
+            addCriterion("HospitalNumber like", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberNotLike(String value) {
-            addCriterion("\"hospital number\" not like", value, "hospitalNumber");
+        public Criteria andHospitalnumberNotLike(String value) {
+            addCriterion("HospitalNumber not like", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberIn(List<String> values) {
-            addCriterion("\"hospital number\" in", values, "hospitalNumber");
+        public Criteria andHospitalnumberIn(List<String> values) {
+            addCriterion("HospitalNumber in", values, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberNotIn(List<String> values) {
-            addCriterion("\"hospital number\" not in", values, "hospitalNumber");
+        public Criteria andHospitalnumberNotIn(List<String> values) {
+            addCriterion("HospitalNumber not in", values, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberBetween(String value1, String value2) {
-            addCriterion("\"hospital number\" between", value1, value2, "hospitalNumber");
+        public Criteria andHospitalnumberBetween(String value1, String value2) {
+            addCriterion("HospitalNumber between", value1, value2, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberNotBetween(String value1, String value2) {
-            addCriterion("\"hospital number\" not between", value1, value2, "hospitalNumber");
+        public Criteria andHospitalnumberNotBetween(String value1, String value2) {
+            addCriterion("HospitalNumber not between", value1, value2, "hospitalnumber");
             return (Criteria) this;
         }
 

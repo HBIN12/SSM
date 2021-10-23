@@ -20,12 +20,13 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     StaffMapper staffMapper;
     @Override
-    public boolean logincheck(String id,String password) {
+    public String logincheck(String id,String password) {
         LoginExample loginExample=new LoginExample();
         LoginExample.Criteria criteria = loginExample.createCriteria();
         criteria.andIdEqualTo(id);
         criteria.andPasswordEqualTo(password);
-        return !loginMapper.selectByExample(loginExample).isEmpty();
+        if (loginMapper.selectByExample(loginExample).isEmpty()){return "";}
+        else return loginMapper.selectByExample(loginExample).get(0).getRole();
     }
 
     @Override
@@ -54,7 +55,7 @@ public class LoginServiceImpl implements LoginService {
             login.setRole("staff");
             Staff staff=new Staff();
             staff.setId(id);
-            staff.setHospitalNumber(gethospitalbycode(code).getHospitalNumber());
+            staff.setHospitalnumber(gethospitalbycode(code).getHospitalnumber());
             insertstaff(staff);
             return loginMapper.insert(login);
     }
@@ -64,6 +65,7 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public boolean checkcode(String code) {
+
         HospitalExample hospitalExample=new HospitalExample();
         HospitalExample.Criteria criteria = hospitalExample.createCriteria();
         criteria.andCodeEqualTo(code);

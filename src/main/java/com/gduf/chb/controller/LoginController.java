@@ -17,8 +17,13 @@ public class LoginController {
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String login(String id, String password, Model model) {
-        if (loginService.logincheck(id, password)) {
-            return "";
+        if (loginService.logincheck(id, password)!="") {
+            switch (loginService.logincheck(id,password)){
+                case "user":return "userlist";
+                case "admin":return "adminlist";
+                case "staff":return "stafflist";
+                default:return "login";
+            }
         } else {
             model.addAttribute("msg", "账号或密码错误");
             return "login";
@@ -37,6 +42,7 @@ public class LoginController {
             if (code != "") {
                 if (loginService.checkcode(code)) {
                     loginService.staffregister(id,password,code);
+                    model.addAttribute("msg", "医护人员注册成功，可直接登录");
                     return "login";
                 } else {
                     model.addAttribute("msg1", "激活码无效");

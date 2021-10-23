@@ -3,7 +3,7 @@
 <mapper namespace="com.gduf.chb.mapper.StaffMapper" >
   <resultMap id="BaseResultMap" type="com.gduf.chb.bean.Staff" >
     <id column="id" property="id" jdbcType="VARCHAR" />
-    <result column="hospital number" property="hospitalNumber" jdbcType="VARCHAR" />
+    <result column="HospitalNumber" property="hospitalnumber" jdbcType="VARCHAR" />
     <result column="number" property="number" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -65,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, "hospital number", number
+    id, HospitalNumber, number
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gduf.chb.bean.StaffExample" >
     select
@@ -98,9 +98,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.gduf.chb.bean.Staff" >
-    insert into staff (id, "hospital number", number
+    insert into staff (id, HospitalNumber, number
       )
-    values (#{id,jdbcType=VARCHAR}, #{hospitalNumber,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}
+    values (#{id,jdbcType=VARCHAR}, #{hospitalnumber,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.gduf.chb.bean.Staff" >
@@ -109,8 +109,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="hospitalNumber != null" >
-        "hospital number",
+      <if test="hospitalnumber != null" >
+        HospitalNumber,
       </if>
       <if test="number != null" >
         number,
@@ -120,8 +120,8 @@
       <if test="id != null" >
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="hospitalNumber != null" >
-        #{hospitalNumber,jdbcType=VARCHAR},
+      <if test="hospitalnumber != null" >
+        #{hospitalnumber,jdbcType=VARCHAR},
       </if>
       <if test="number != null" >
         #{number,jdbcType=VARCHAR},
@@ -140,8 +140,8 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=VARCHAR},
       </if>
-      <if test="record.hospitalNumber != null" >
-        "hospital number" = #{record.hospitalNumber,jdbcType=VARCHAR},
+      <if test="record.hospitalnumber != null" >
+        HospitalNumber = #{record.hospitalnumber,jdbcType=VARCHAR},
       </if>
       <if test="record.number != null" >
         number = #{record.number,jdbcType=VARCHAR},
@@ -154,7 +154,7 @@
   <update id="updateByExample" parameterType="map" >
     update staff
     set id = #{record.id,jdbcType=VARCHAR},
-      "hospital number" = #{record.hospitalNumber,jdbcType=VARCHAR},
+      HospitalNumber = #{record.hospitalnumber,jdbcType=VARCHAR},
       number = #{record.number,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -163,8 +163,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.gduf.chb.bean.Staff" >
     update staff
     <set >
-      <if test="hospitalNumber != null" >
-        "hospital number" = #{hospitalNumber,jdbcType=VARCHAR},
+      <if test="hospitalnumber != null" >
+        HospitalNumber = #{hospitalnumber,jdbcType=VARCHAR},
       </if>
       <if test="number != null" >
         number = #{number,jdbcType=VARCHAR},
@@ -174,7 +174,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.gduf.chb.bean.Staff" >
     update staff
-    set "hospital number" = #{hospitalNumber,jdbcType=VARCHAR},
+    set HospitalNumber = #{hospitalnumber,jdbcType=VARCHAR},
       number = #{number,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>

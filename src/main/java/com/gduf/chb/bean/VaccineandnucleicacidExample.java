@@ -104,253 +104,253 @@ public class VaccineandnucleicacidExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andHospitalNumberIsNull() {
-            addCriterion("\"hospital number\" is null");
+        public Criteria andHospitalnumberIsNull() {
+            addCriterion("HospitalNumber is null");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberIsNotNull() {
-            addCriterion("\"hospital number\" is not null");
+        public Criteria andHospitalnumberIsNotNull() {
+            addCriterion("HospitalNumber is not null");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberEqualTo(Integer value) {
-            addCriterion("\"hospital number\" =", value, "hospitalNumber");
+        public Criteria andHospitalnumberEqualTo(Integer value) {
+            addCriterion("HospitalNumber =", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberNotEqualTo(Integer value) {
-            addCriterion("\"hospital number\" <>", value, "hospitalNumber");
+        public Criteria andHospitalnumberNotEqualTo(Integer value) {
+            addCriterion("HospitalNumber <>", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberGreaterThan(Integer value) {
-            addCriterion("\"hospital number\" >", value, "hospitalNumber");
+        public Criteria andHospitalnumberGreaterThan(Integer value) {
+            addCriterion("HospitalNumber >", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberGreaterThanOrEqualTo(Integer value) {
-            addCriterion("\"hospital number\" >=", value, "hospitalNumber");
+        public Criteria andHospitalnumberGreaterThanOrEqualTo(Integer value) {
+            addCriterion("HospitalNumber >=", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberLessThan(Integer value) {
-            addCriterion("\"hospital number\" <", value, "hospitalNumber");
+        public Criteria andHospitalnumberLessThan(Integer value) {
+            addCriterion("HospitalNumber <", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberLessThanOrEqualTo(Integer value) {
-            addCriterion("\"hospital number\" <=", value, "hospitalNumber");
+        public Criteria andHospitalnumberLessThanOrEqualTo(Integer value) {
+            addCriterion("HospitalNumber <=", value, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberIn(List<Integer> values) {
-            addCriterion("\"hospital number\" in", values, "hospitalNumber");
+        public Criteria andHospitalnumberIn(List<Integer> values) {
+            addCriterion("HospitalNumber in", values, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberNotIn(List<Integer> values) {
-            addCriterion("\"hospital number\" not in", values, "hospitalNumber");
+        public Criteria andHospitalnumberNotIn(List<Integer> values) {
+            addCriterion("HospitalNumber not in", values, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberBetween(Integer value1, Integer value2) {
-            addCriterion("\"hospital number\" between", value1, value2, "hospitalNumber");
+        public Criteria andHospitalnumberBetween(Integer value1, Integer value2) {
+            addCriterion("HospitalNumber between", value1, value2, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andHospitalNumberNotBetween(Integer value1, Integer value2) {
-            addCriterion("\"hospital number\" not between", value1, value2, "hospitalNumber");
+        public Criteria andHospitalnumberNotBetween(Integer value1, Integer value2) {
+            addCriterion("HospitalNumber not between", value1, value2, "hospitalnumber");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeIsNull() {
-            addCriterion("\"reagent type\" is null");
+        public Criteria andReagenttypeIsNull() {
+            addCriterion("ReagentType is null");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeIsNotNull() {
-            addCriterion("\"reagent type\" is not null");
+        public Criteria andReagenttypeIsNotNull() {
+            addCriterion("ReagentType is not null");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeEqualTo(String value) {
-            addCriterion("\"reagent type\" =", value, "reagentType");
+        public Criteria andReagenttypeEqualTo(String value) {
+            addCriterion("ReagentType =", value, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeNotEqualTo(String value) {
-            addCriterion("\"reagent type\" <>", value, "reagentType");
+        public Criteria andReagenttypeNotEqualTo(String value) {
+            addCriterion("ReagentType <>", value, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeGreaterThan(String value) {
-            addCriterion("\"reagent type\" >", value, "reagentType");
+        public Criteria andReagenttypeGreaterThan(String value) {
+            addCriterion("ReagentType >", value, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeGreaterThanOrEqualTo(String value) {
-            addCriterion("\"reagent type\" >=", value, "reagentType");
+        public Criteria andReagenttypeGreaterThanOrEqualTo(String value) {
+            addCriterion("ReagentType >=", value, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeLessThan(String value) {
-            addCriterion("\"reagent type\" <", value, "reagentType");
+        public Criteria andReagenttypeLessThan(String value) {
+            addCriterion("ReagentType <", value, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeLessThanOrEqualTo(String value) {
-            addCriterion("\"reagent type\" <=", value, "reagentType");
+        public Criteria andReagenttypeLessThanOrEqualTo(String value) {
+            addCriterion("ReagentType <=", value, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeLike(String value) {
-            addCriterion("\"reagent type\" like", value, "reagentType");
+        public Criteria andReagenttypeLike(String value) {
+            addCriterion("ReagentType like", value, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeNotLike(String value) {
-            addCriterion("\"reagent type\" not like", value, "reagentType");
+        public Criteria andReagenttypeNotLike(String value) {
+            addCriterion("ReagentType not like", value, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeIn(List<String> values) {
-            addCriterion("\"reagent type\" in", values, "reagentType");
+        public Criteria andReagenttypeIn(List<String> values) {
+            addCriterion("ReagentType in", values, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeNotIn(List<String> values) {
-            addCriterion("\"reagent type\" not in", values, "reagentType");
+        public Criteria andReagenttypeNotIn(List<String> values) {
+            addCriterion("ReagentType not in", values, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeBetween(String value1, String value2) {
-            addCriterion("\"reagent type\" between", value1, value2, "reagentType");
+        public Criteria andReagenttypeBetween(String value1, String value2) {
+            addCriterion("ReagentType between", value1, value2, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andReagentTypeNotBetween(String value1, String value2) {
-            addCriterion("\"reagent type\" not between", value1, value2, "reagentType");
+        public Criteria andReagenttypeNotBetween(String value1, String value2) {
+            addCriterion("ReagentType not between", value1, value2, "reagenttype");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountIsNull() {
-            addCriterion("\"total amount\" is null");
+        public Criteria andTotalamountIsNull() {
+            addCriterion("TotalAmount is null");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountIsNotNull() {
-            addCriterion("\"total amount\" is not null");
+        public Criteria andTotalamountIsNotNull() {
+            addCriterion("TotalAmount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountEqualTo(Integer value) {
-            addCriterion("\"total amount\" =", value, "totalAmount");
+        public Criteria andTotalamountEqualTo(Integer value) {
+            addCriterion("TotalAmount =", value, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountNotEqualTo(Integer value) {
-            addCriterion("\"total amount\" <>", value, "totalAmount");
+        public Criteria andTotalamountNotEqualTo(Integer value) {
+            addCriterion("TotalAmount <>", value, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountGreaterThan(Integer value) {
-            addCriterion("\"total amount\" >", value, "totalAmount");
+        public Criteria andTotalamountGreaterThan(Integer value) {
+            addCriterion("TotalAmount >", value, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("\"total amount\" >=", value, "totalAmount");
+        public Criteria andTotalamountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("TotalAmount >=", value, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountLessThan(Integer value) {
-            addCriterion("\"total amount\" <", value, "totalAmount");
+        public Criteria andTotalamountLessThan(Integer value) {
+            addCriterion("TotalAmount <", value, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountLessThanOrEqualTo(Integer value) {
-            addCriterion("\"total amount\" <=", value, "totalAmount");
+        public Criteria andTotalamountLessThanOrEqualTo(Integer value) {
+            addCriterion("TotalAmount <=", value, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountIn(List<Integer> values) {
-            addCriterion("\"total amount\" in", values, "totalAmount");
+        public Criteria andTotalamountIn(List<Integer> values) {
+            addCriterion("TotalAmount in", values, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountNotIn(List<Integer> values) {
-            addCriterion("\"total amount\" not in", values, "totalAmount");
+        public Criteria andTotalamountNotIn(List<Integer> values) {
+            addCriterion("TotalAmount not in", values, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountBetween(Integer value1, Integer value2) {
-            addCriterion("\"total amount\" between", value1, value2, "totalAmount");
+        public Criteria andTotalamountBetween(Integer value1, Integer value2) {
+            addCriterion("TotalAmount between", value1, value2, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andTotalAmountNotBetween(Integer value1, Integer value2) {
-            addCriterion("\"total amount\" not between", value1, value2, "totalAmount");
+        public Criteria andTotalamountNotBetween(Integer value1, Integer value2) {
+            addCriterion("TotalAmount not between", value1, value2, "totalamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountIsNull() {
-            addCriterion("\"remaining amount\" is null");
+        public Criteria andRemainingamountIsNull() {
+            addCriterion("RemainingAmount is null");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountIsNotNull() {
-            addCriterion("\"remaining amount\" is not null");
+        public Criteria andRemainingamountIsNotNull() {
+            addCriterion("RemainingAmount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountEqualTo(Integer value) {
-            addCriterion("\"remaining amount\" =", value, "remainingAmount");
+        public Criteria andRemainingamountEqualTo(Integer value) {
+            addCriterion("RemainingAmount =", value, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountNotEqualTo(Integer value) {
-            addCriterion("\"remaining amount\" <>", value, "remainingAmount");
+        public Criteria andRemainingamountNotEqualTo(Integer value) {
+            addCriterion("RemainingAmount <>", value, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountGreaterThan(Integer value) {
-            addCriterion("\"remaining amount\" >", value, "remainingAmount");
+        public Criteria andRemainingamountGreaterThan(Integer value) {
+            addCriterion("RemainingAmount >", value, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("\"remaining amount\" >=", value, "remainingAmount");
+        public Criteria andRemainingamountGreaterThanOrEqualTo(Integer value) {
+            addCriterion("RemainingAmount >=", value, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountLessThan(Integer value) {
-            addCriterion("\"remaining amount\" <", value, "remainingAmount");
+        public Criteria andRemainingamountLessThan(Integer value) {
+            addCriterion("RemainingAmount <", value, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountLessThanOrEqualTo(Integer value) {
-            addCriterion("\"remaining amount\" <=", value, "remainingAmount");
+        public Criteria andRemainingamountLessThanOrEqualTo(Integer value) {
+            addCriterion("RemainingAmount <=", value, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountIn(List<Integer> values) {
-            addCriterion("\"remaining amount\" in", values, "remainingAmount");
+        public Criteria andRemainingamountIn(List<Integer> values) {
+            addCriterion("RemainingAmount in", values, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountNotIn(List<Integer> values) {
-            addCriterion("\"remaining amount\" not in", values, "remainingAmount");
+        public Criteria andRemainingamountNotIn(List<Integer> values) {
+            addCriterion("RemainingAmount not in", values, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountBetween(Integer value1, Integer value2) {
-            addCriterion("\"remaining amount\" between", value1, value2, "remainingAmount");
+        public Criteria andRemainingamountBetween(Integer value1, Integer value2) {
+            addCriterion("RemainingAmount between", value1, value2, "remainingamount");
             return (Criteria) this;
         }
 
-        public Criteria andRemainingAmountNotBetween(Integer value1, Integer value2) {
-            addCriterion("\"remaining amount\" not between", value1, value2, "remainingAmount");
+        public Criteria andRemainingamountNotBetween(Integer value1, Integer value2) {
+            addCriterion("RemainingAmount not between", value1, value2, "remainingamount");
             return (Criteria) this;
         }
     }

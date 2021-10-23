@@ -3,7 +3,7 @@
 <mapper namespace="com.gduf.chb.mapper.UserhealthMapper" >
   <resultMap id="BaseResultMap" type="com.gduf.chb.bean.Userhealth" >
     <id column="IDcard" property="idcard" jdbcType="VARCHAR" />
-    <result column="nucleic acid" property="nucleicAcid" jdbcType="VARCHAR" />
+    <result column="NucleicAcid" property="nucleicacid" jdbcType="VARCHAR" />
     <result column="vaccination" property="vaccination" jdbcType="VARCHAR" />
     <result column="temperature" property="temperature" jdbcType="VARCHAR" />
     <result column="current" property="current" jdbcType="VARCHAR" />
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    IDcard, "nucleic acid", vaccination, temperature, current
+    IDcard, NucleicAcid, vaccination, temperature, current
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.gduf.chb.bean.UserhealthExample" >
     select
@@ -100,9 +100,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.gduf.chb.bean.Userhealth" >
-    insert into userhealth (IDcard, "nucleic acid", vaccination, 
+    insert into userhealth (IDcard, NucleicAcid, vaccination, 
       temperature, current)
-    values (#{idcard,jdbcType=VARCHAR}, #{nucleicAcid,jdbcType=VARCHAR}, #{vaccination,jdbcType=VARCHAR}, 
+    values (#{idcard,jdbcType=VARCHAR}, #{nucleicacid,jdbcType=VARCHAR}, #{vaccination,jdbcType=VARCHAR}, 
       #{temperature,jdbcType=VARCHAR}, #{current,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.gduf.chb.bean.Userhealth" >
@@ -111,8 +111,8 @@
       <if test="idcard != null" >
         IDcard,
       </if>
-      <if test="nucleicAcid != null" >
-        "nucleic acid",
+      <if test="nucleicacid != null" >
+        NucleicAcid,
       </if>
       <if test="vaccination != null" >
         vaccination,
@@ -128,8 +128,8 @@
       <if test="idcard != null" >
         #{idcard,jdbcType=VARCHAR},
       </if>
-      <if test="nucleicAcid != null" >
-        #{nucleicAcid,jdbcType=VARCHAR},
+      <if test="nucleicacid != null" >
+        #{nucleicacid,jdbcType=VARCHAR},
       </if>
       <if test="vaccination != null" >
         #{vaccination,jdbcType=VARCHAR},
@@ -154,8 +154,8 @@
       <if test="record.idcard != null" >
         IDcard = #{record.idcard,jdbcType=VARCHAR},
       </if>
-      <if test="record.nucleicAcid != null" >
-        "nucleic acid" = #{record.nucleicAcid,jdbcType=VARCHAR},
+      <if test="record.nucleicacid != null" >
+        NucleicAcid = #{record.nucleicacid,jdbcType=VARCHAR},
       </if>
       <if test="record.vaccination != null" >
         vaccination = #{record.vaccination,jdbcType=VARCHAR},
@@ -174,7 +174,7 @@
   <update id="updateByExample" parameterType="map" >
     update userhealth
     set IDcard = #{record.idcard,jdbcType=VARCHAR},
-      "nucleic acid" = #{record.nucleicAcid,jdbcType=VARCHAR},
+      NucleicAcid = #{record.nucleicacid,jdbcType=VARCHAR},
       vaccination = #{record.vaccination,jdbcType=VARCHAR},
       temperature = #{record.temperature,jdbcType=VARCHAR},
       current = #{record.current,jdbcType=VARCHAR}
@@ -185,8 +185,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.gduf.chb.bean.Userhealth" >
     update userhealth
     <set >
-      <if test="nucleicAcid != null" >
-        "nucleic acid" = #{nucleicAcid,jdbcType=VARCHAR},
+      <if test="nucleicacid != null" >
+        NucleicAcid = #{nucleicacid,jdbcType=VARCHAR},
       </if>
       <if test="vaccination != null" >
         vaccination = #{vaccination,jdbcType=VARCHAR},
@@ -202,7 +202,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.gduf.chb.bean.Userhealth" >
     update userhealth
-    set "nucleic acid" = #{nucleicAcid,jdbcType=VARCHAR},
+    set NucleicAcid = #{nucleicacid,jdbcType=VARCHAR},
       vaccination = #{vaccination,jdbcType=VARCHAR},
       temperature = #{temperature,jdbcType=VARCHAR},
       current = #{current,jdbcType=VARCHAR}

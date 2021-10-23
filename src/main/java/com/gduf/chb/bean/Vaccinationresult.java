@@ -8,7 +8,7 @@ public class Vaccinationresult implements Serializable {
 
     private String type;
 
-    private String hospitalName;
+    private String hospitalname;
 
     private Date time;
 
@@ -30,12 +30,12 @@ public class Vaccinationresult implements Serializable {
         this.type = type == null ? null : type.trim();
     }
 
-    public String getHospitalName() {
-        return hospitalName;
+    public String getHospitalname() {
+        return hospitalname;
     }
 
-    public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName == null ? null : hospitalName.trim();
+    public void setHospitalname(String hospitalname) {
+        this.hospitalname = hospitalname == null ? null : hospitalname.trim();
     }
 
     public Date getTime() {
@@ -54,7 +54,7 @@ public class Vaccinationresult implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", idcard=").append(idcard);
         sb.append(", type=").append(type);
-        sb.append(", hospitalName=").append(hospitalName);
+        sb.append(", hospitalname=").append(hospitalname);
         sb.append(", time=").append(time);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

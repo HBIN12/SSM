@@ -10,7 +10,7 @@ public interface HospitalMapper {
 
     int deleteByExample(HospitalExample example);
 
-    int deleteByPrimaryKey(String hospitalNumber);
+    int deleteByPrimaryKey(String hospitalnumber);
 
     int insert(Hospital record);
 
@@ -18,7 +18,7 @@ public interface HospitalMapper {
 
     List<Hospital> selectByExample(HospitalExample example);
 
-    Hospital selectByPrimaryKey(String hospitalNumber);
+    Hospital selectByPrimaryKey(String hospitalnumber);
 
     int updateByExampleSelective(@Param("record") Hospital record, @Param("example") HospitalExample example);
 

@@ -8,9 +8,9 @@ public class Vaccinationreservation implements Serializable {
 
     private Date time;
 
-    private String hospitalName;
+    private String hospitalname;
 
-    private String vaccineType;
+    private String vaccinetype;
 
     private static final long serialVersionUID = 1L;
 
@@ -30,20 +30,20 @@ public class Vaccinationreservation implements Serializable {
         this.time = time;
     }
 
-    public String getHospitalName() {
-        return hospitalName;
+    public String getHospitalname() {
+        return hospitalname;
     }
 
-    public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName == null ? null : hospitalName.trim();
+    public void setHospitalname(String hospitalname) {
+        this.hospitalname = hospitalname == null ? null : hospitalname.trim();
     }
 
-    public String getVaccineType() {
-        return vaccineType;
+    public String getVaccinetype() {
+        return vaccinetype;
     }
 
-    public void setVaccineType(String vaccineType) {
-        this.vaccineType = vaccineType == null ? null : vaccineType.trim();
+    public void setVaccinetype(String vaccinetype) {
+        this.vaccinetype = vaccinetype == null ? null : vaccinetype.trim();
     }
 
     @Override
@@ -54,8 +54,8 @@ public class Vaccinationreservation implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", idcard=").append(idcard);
         sb.append(", time=").append(time);
-        sb.append(", hospitalName=").append(hospitalName);
-        sb.append(", vaccineType=").append(vaccineType);
+        sb.append(", hospitalname=").append(hospitalname);
+        sb.append(", vaccinetype=").append(vaccinetype);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

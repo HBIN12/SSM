@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Staff implements Serializable {
     private String id;
 
-    private String hospitalNumber;
+    private String hospitalnumber;
 
     private String number;
 
@@ -19,12 +19,12 @@ public class Staff implements Serializable {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getHospitalNumber() {
-        return hospitalNumber;
+    public String getHospitalnumber() {
+        return hospitalnumber;
     }
 
-    public void setHospitalNumber(String hospitalNumber) {
-        this.hospitalNumber = hospitalNumber == null ? null : hospitalNumber.trim();
+    public void setHospitalnumber(String hospitalnumber) {
+        this.hospitalnumber = hospitalnumber == null ? null : hospitalnumber.trim();
     }
 
     public String getNumber() {
@@ -42,7 +42,7 @@ public class Staff implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", hospitalNumber=").append(hospitalNumber);
+        sb.append(", hospitalnumber=").append(hospitalnumber);
         sb.append(", number=").append(number);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

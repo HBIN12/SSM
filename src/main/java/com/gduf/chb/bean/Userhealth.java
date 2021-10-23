@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Userhealth implements Serializable {
     private String idcard;
 
-    private String nucleicAcid;
+    private String nucleicacid;
 
     private String vaccination;
 
@@ -23,12 +23,12 @@ public class Userhealth implements Serializable {
         this.idcard = idcard == null ? null : idcard.trim();
     }
 
-    public String getNucleicAcid() {
-        return nucleicAcid;
+    public String getNucleicacid() {
+        return nucleicacid;
     }
 
-    public void setNucleicAcid(String nucleicAcid) {
-        this.nucleicAcid = nucleicAcid == null ? null : nucleicAcid.trim();
+    public void setNucleicacid(String nucleicacid) {
+        this.nucleicacid = nucleicacid == null ? null : nucleicacid.trim();
     }
 
     public String getVaccination() {
@@ -62,7 +62,7 @@ public class Userhealth implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", idcard=").append(idcard);
-        sb.append(", nucleicAcid=").append(nucleicAcid);
+        sb.append(", nucleicacid=").append(nucleicacid);
         sb.append(", vaccination=").append(vaccination);
         sb.append(", temperature=").append(temperature);
         sb.append(", current=").append(current);

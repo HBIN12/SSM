@@ -3,46 +3,46 @@ package com.gduf.chb.bean;
 import java.io.Serializable;
 
 public class Vaccineandnucleicacid implements Serializable {
-    private Integer hospitalNumber;
+    private Integer hospitalnumber;
 
-    private String reagentType;
+    private String reagenttype;
 
-    private Integer totalAmount;
+    private Integer totalamount;
 
-    private Integer remainingAmount;
+    private Integer remainingamount;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getHospitalNumber() {
-        return hospitalNumber;
+    public Integer getHospitalnumber() {
+        return hospitalnumber;
     }
 
-    public void setHospitalNumber(Integer hospitalNumber) {
-        this.hospitalNumber = hospitalNumber;
+    public void setHospitalnumber(Integer hospitalnumber) {
+        this.hospitalnumber = hospitalnumber;
     }
 
-    public String getReagentType() {
-        return reagentType;
+    public String getReagenttype() {
+        return reagenttype;
     }
 
-    public void setReagentType(String reagentType) {
-        this.reagentType = reagentType == null ? null : reagentType.trim();
+    public void setReagenttype(String reagenttype) {
+        this.reagenttype = reagenttype == null ? null : reagenttype.trim();
     }
 
-    public Integer getTotalAmount() {
-        return totalAmount;
+    public Integer getTotalamount() {
+        return totalamount;
     }
 
-    public void setTotalAmount(Integer totalAmount) {
-        this.totalAmount = totalAmount;
+    public void setTotalamount(Integer totalamount) {
+        this.totalamount = totalamount;
     }
 
-    public Integer getRemainingAmount() {
-        return remainingAmount;
+    public Integer getRemainingamount() {
+        return remainingamount;
     }
 
-    public void setRemainingAmount(Integer remainingAmount) {
-        this.remainingAmount = remainingAmount;
+    public void setRemainingamount(Integer remainingamount) {
+        this.remainingamount = remainingamount;
     }
 
     @Override
@@ -51,10 +51,10 @@ public class Vaccineandnucleicacid implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", hospitalNumber=").append(hospitalNumber);
-        sb.append(", reagentType=").append(reagentType);
-        sb.append(", totalAmount=").append(totalAmount);
-        sb.append(", remainingAmount=").append(remainingAmount);
+        sb.append(", hospitalnumber=").append(hospitalnumber);
+        sb.append(", reagenttype=").append(reagenttype);
+        sb.append(", totalamount=").append(totalamount);
+        sb.append(", remainingamount=").append(remainingamount);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
