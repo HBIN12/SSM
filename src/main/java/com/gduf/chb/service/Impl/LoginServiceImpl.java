@@ -20,13 +20,13 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     StaffMapper staffMapper;
     @Override
-    public String logincheck(String id,String password) {
+    public Login logincheck(String id,String password) {
         LoginExample loginExample=new LoginExample();
         LoginExample.Criteria criteria = loginExample.createCriteria();
         criteria.andIdEqualTo(id);
         criteria.andPasswordEqualTo(password);
-        if (loginMapper.selectByExample(loginExample).isEmpty()){return "";}
-        else return loginMapper.selectByExample(loginExample).get(0).getRole();
+        if (loginMapper.selectByExample(loginExample).isEmpty()){return null;}
+        else return loginMapper.selectByExample(loginExample).get(0);
     }
 
     @Override

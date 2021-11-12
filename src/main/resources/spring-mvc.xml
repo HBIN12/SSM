@@ -12,9 +12,19 @@
     <context:component-scan base-package="com.gduf.chb.controller"></context:component-scan>
     <!--注解驱动注册-->
     <mvc:annotation-driven></mvc:annotation-driven>
-    <!--简化访问-->
+    <!--
+    +-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
+    <!-- 在springmvc-config.xml中配置 -->
+    <!-- 配置拦截器 -->
+    <!--<mvc:interceptors>
+        <mvc:interceptor>
+            &lt;!&ndash; 将所有用户的用户主求都交由登录拦截器来处理 &ndash;&gt;
+            <mvc:mapping path="/**" />
+            <bean class="com.gduf.chb.utils.Interceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>-->
 </beans>

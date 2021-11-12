@@ -17,11 +17,14 @@ public class Interceptor implements HandlerInterceptor {
         }
         HttpSession session = request.getSession();
         Login login = (Login) session.getAttribute("Login_SESSION");
-        if (login != null) {
+        Login login1=(Login) session.getAttribute("Login_SESSION1");
+        Login login2 = (Login) session.getAttribute("Login_SESSION2");
+        Login login3 = (Login) session.getAttribute("Login_SESSION3");
+        if (login != null ||login2!=null||login1!=null||login3!=null) {
             return true;
         } else {
             request.setAttribute("msg", "您还没有登录，请先登录！");
-            request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/jsp/Login.jsp").forward(request, response);
             return false;
         }
     }

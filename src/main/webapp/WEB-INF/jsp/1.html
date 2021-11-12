@@ -1,0 +1,81 @@
+<span style="font-size:18px;"><%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<html>
+<head>
+<title>add tr demo</title>
+<style type="text/css">
+	.datatable td {
+	border-bottom: 1px solid #e4e5e5;
+	height: 35px;
+	line-height: 35px;
+	text-align: left;
+	padding-left: 10px;
+	}
+</style>
+<script type="text/javascript"	src="/AddTrDemo/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" charset="UTF-8">
+ 
+	function addTr(obj){
+	     var tr = $(obj).parent().parent().clone();  //当前obj的父节点td的父节点tr
+	     tr.appendTo("#fatable");
+/* 	     $("#fatable tr:last input[type=text]").val(0);    默认值设置为0*/
+ 
+	}
+	function delTr(obj){
+		var trlen = $("#fatable tr").length;
+		if(trlen==1){
+			showError('Cannot Be Deleted');
+			return false;
+		}
+		$(obj).parent().parent().remove(); 
+	}
+</script>
+ 
+</head>
+<body style="text-align:center">
+	<form id="" method="post" action="">
+		<div class="pop-body">
+			<div style="padding:0 20px; margin-top:10px;margin-bottom: 20px;">
+                 <div style="position:relative; z-index:1000px;">
+                   <table width="100%">
+                     <tbody><tr>
+                       <th width="22%">Plan </th>
+                       <th width="2%">|</th>
+                       <th width="22%">Quantity (packs)</th>
+                       <th width="2%">|</th>
+                       <th width="22%">Quantity (tickets)</th>
+                       <th width="2%">|</th>
+                       <th width="22%">Amount (riels)</th>
+                       <th width="8%"> </th>
+                     </tr>
+                   </tbody></table>
+                 </div>
+                 <div id="box" style="border:1px solid #ccc;">
+                   <table id="fatable" class="datatable" cellpadding="0 " cellspacing="0" width="100%">
+                     <tbody>
+                     <tr>
+                       <td width="22%">
+                       	   <select style="width: 230px" name="planCode">
+	                       </select>
+                       </td>
+                       <td width="2%"> </td>
+                       <td width="22%"><input type="text"  name="packages"/></td>
+                       <td width="2%"> </td>
+                       <td width="22%"><input type="text"  name="tickets"/> </td>
+                       <td width="2%"> </td>
+                       <td width="22%"><input type="text"  name="amount"/> </td>
+                       <td width="4%">
+                       		<img src="img/add.png"  οnclick="addTr(this);" height="16px" width="16px"/>
+                       </td>
+                       <td width="4%">
+                       		<img src="img/delete.png"  οnclick="delTr(this);" height="16px" width="16px"/>
+                       </td>
+                     </tr>
+                   </tbody></table>
+                 </div>
+           </div>
+		</div>
+	</form>
+ 
+</body>
+</html></span>

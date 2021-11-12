@@ -6,11 +6,12 @@ import com.gduf.chb.bean.Staff;
 import com.gduf.chb.bean.User;
 
 public interface LoginService {
-    String logincheck(String id,String password);
+    Login logincheck(String id,String password);
     int userregister(String id,String password);
     int staffregister(String id,String password,String code);
     boolean checkid(String id);
     boolean checkcode(String code);
     int insertstaff(Staff staff);
     Hospital gethospitalbycode(String code);
+
 }
